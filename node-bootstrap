@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Bootstrap Node environment, with n version manager.
+# Author: Matt Dumler <mattd3v@pm.me> (https://mattdumler.app)
+# Edited: April 25st, 2020
+# License: MIT
+
+# Fetch script
+curl -o n \
+  -L https://raw.githubusercontent.com/tj/n/master/bin/n
+
+# Run script and cleanup
+bash n lts && rm n

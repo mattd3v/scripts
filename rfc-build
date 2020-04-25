@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# rfc-build
+# Author: Matt Dumler <mattd3v@pm.me> (https://mattdumler.app)
+# Edited: April 25st, 2020
+# License: MIT
+
+ID_VERSION=00
+ID_NAME=draft-dumler-jsresume
+NAME=$ID_NAME-$ID_VERSION
+
+# Run bundled sources through RFC build pipeline
+# to produce artifact for Internet-Draft submission.
+./bundle | kramdown-rfc2629 | xml2rfc --basename $NAME
